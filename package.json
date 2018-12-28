@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "prebuild": "babel node_modules/@vue/web-component-wrapper/dist/vue-wc-wrapper.js -o node_modules/@vue/web-component-wrapper/dist/vue-wc-wrapper.js",
-    "build": "vue-cli-service build --target wc --name my-first-component",
+    "build": "vue-cli-service build --target wc --name my-first-component src/components/*.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
