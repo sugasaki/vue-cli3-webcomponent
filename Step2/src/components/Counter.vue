@@ -1,9 +1,9 @@
 <template>
-  <v-app>
-    <h1>{{ count }}</h1>
+  <div>
+    <h1>{{ mCount }}</h1>
     <v-btn color="success" v-on:click="countUp">Count Up</v-btn>
     <v-btn color="info" v-on:click="countDown">Count Down</v-btn>
-  </v-app>
+  </div>
 </template>
 
 
@@ -20,19 +20,28 @@ Vue.use(Vuetify);
 
 export default {
   name: "Counter",
+  data: function() {
+    return {
+      mCount: 0
+    };
+  },
   props: {
     count: {
       type: Number,
       default: 0,
-      required: true
+      required: false
     }
   },
+  created() {
+    this.mCount = this.count;
+  },
+  async mount() {},
   methods: {
     countUp() {
-      this.count += 1;
+      this.mCount += 1;
     },
     countDown() {
-      this.count -= 1;
+      this.mCount -= 1;
     }
   }
 };
