@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Counter/>
+    <Counter v-bind:count="count"/>
+    <Counter v-bind:count="3"/>
   </div>
 </template>
 
@@ -9,6 +10,11 @@ import Counter from "./components/Counter.vue";
 
 export default {
   name: "app",
+  data: function() {
+    return {
+      count: 2
+    };
+  },
   components: {
     Counter
   }
