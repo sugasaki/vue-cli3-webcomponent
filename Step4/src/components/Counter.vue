@@ -1,13 +1,42 @@
 <template>
-  <div class="hello">
-    <h1>{{ count }}</h1>
-    <button v-on:click="countUp">Click me</button>
+  <div>
+    <h1>{{ mCount }}</h1>
+    <button v-on:click="countUp">
+      <icon-base width="30" height="30" icon-name="plus">
+        <icon-plus/>
+      </icon-base>
+    </button>
+    <button v-on:click="countDown">
+      <icon-base width="30" height="30" icon-name="minus">
+        <icon-minus/>
+      </icon-base>
+    </button>
   </div>
 </template>
 
+
+<style>
+/* no need to use CSS Modules or Scoped CSS */
+</style>
+
+
 <script>
+import IconBase from "./IconBase.vue";
+import IconPlus from "./icons/IconPlus.vue";
+import IconMinus from "./icons/IconMinus.vue";
+
 export default {
   name: "Counter",
+  data: function() {
+    return {
+      mCount: 0
+    };
+  },
+  components: {
+    IconBase,
+    IconPlus,
+    IconMinus
+  },
   props: {
     count: {
       type: Number,
@@ -15,20 +44,16 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      count
-    };
-  },
+  created() {},
+  async mount() {},
   methods: {
-    /** テキストが入力された時に呼び出される */
     countUp() {
-      this.count += 1;
+      this.mCount += 1;
+    },
+    countDown() {
+      this.mCount -= 1;
     }
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>

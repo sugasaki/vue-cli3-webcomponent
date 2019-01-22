@@ -1,25 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Counter v-bind:count="7"/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <counter v-bind:count="count"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Counter from "./components/Counter.vue";
 
 export default {
   name: "app",
+  data: function() {
+    return {
+      count: 2
+    };
+  },
   components: {
-    HelloWorld,
     Counter
   }
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
