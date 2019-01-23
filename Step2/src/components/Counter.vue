@@ -7,7 +7,7 @@
 </template>
 
 
-<style>
+<style scoped>
 /* no need to use CSS Modules or Scoped CSS */
 @import "../../node_modules/vuetify/dist/vuetify.min.css";
 </style>

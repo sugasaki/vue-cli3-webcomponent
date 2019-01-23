@@ -2,11 +2,13 @@
   <div id="app">
     <Counter v-bind:count="count"/>
     <Counter v-bind:count="3"/>
+    <Button>Hello</Button>
   </div>
 </template>
 
 <script>
 import Counter from "./components/Counter.vue";
+import Button from "./components/Button.vue";
 
 export default {
   name: "app",
@@ -16,7 +18,8 @@ export default {
     };
   },
   components: {
-    Counter
+    Counter,
+    Button
   }
 };
 </script>

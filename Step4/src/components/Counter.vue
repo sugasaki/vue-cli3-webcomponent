@@ -21,7 +21,7 @@
 
 
 <script>
-import IconBase from "./IconBase.vue";
+import IconBase from ".//IconBase.vue";
 import IconPlus from "./icons/IconPlus.vue";
 import IconMinus from "./icons/IconMinus.vue";
 

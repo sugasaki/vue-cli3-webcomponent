@@ -9,7 +9,7 @@
 
 <style>
 /* no need to use CSS Modules or Scoped CSS */
-@import "../../node_modules/element-ui/lib/theme-chalk/index.css";
+@import "../../node_modules/element-ui/lib/theme-chalk/button.css";
 </style>
 
 
